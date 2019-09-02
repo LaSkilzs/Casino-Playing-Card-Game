@@ -1,4 +1,4 @@
-export default card = [
+const cardDeck = () => [
   { image: "\u1F0A1", value: 1, number: 1, point: true },
   { image: "\u1F0B1", value: 1, number: 1, point: true },
   { image: "\u1F0C1", value: 1, number: 1, point: true },
@@ -56,3 +56,5 @@ export default card = [
   { image: "\u1F0CE", number: 14 },
   { image: "\u1F0DE", number: 14 }
 ];
+
+export default cardDeck;

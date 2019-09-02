@@ -1,4 +1,4 @@
-import Card from "./Card";
+import card from "../js/CardDeck";
 
 export const createGame = (start = false, type = 4) => {
   game = {
@@ -30,7 +30,7 @@ export const createBoard = players => {
 };
 export const createDeck = () => {
   cards = {
-    deck: Card(),
+    deck: card(),
     hands: []
   };
   return cards;
@@ -43,7 +43,6 @@ export const createHand = (deck, name, num) => {
   deck.hands.push({ player: name, hand: hand });
   return deck;
 };
-
 export const start = players => {
   let num = 6;
   let board = board(players);

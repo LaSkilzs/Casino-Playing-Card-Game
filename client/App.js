@@ -1,12 +1,21 @@
 import React from "react";
+import { Route, Switch } from "react-router-dom";
+import routes from "./Routes";
 
 const App = props => {
-  let car = "\u1f0b1";
-  console.log(car);
   return (
-    <div>
-      <button>{"What's Up"}</button>
-    </div>
+    <React.Fragment>
+      <Switch>
+        {routes.map(({ path, exact, component: C, ...rest }) => (
+          <Route
+            key={path}
+            path={path}
+            exact={exact}
+            render={routerProps => <C {...routerProps} {...rest} />}
+          />
+        ))}
+      </Switch>
+    </React.Fragment>
   );
 };
 
