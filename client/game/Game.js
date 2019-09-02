@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import Board from "./Board";
 import Players from "./Players";
 import Deck from "./Deck";
+import { Grid, Typography, Button } from "@material-ui/core";
+import { Link } from "react-router-dom";
 
 class Game extends Component {
   constructor(props) {
@@ -15,12 +17,26 @@ class Game extends Component {
   }
   render() {
     return (
-      <div>
-        <h1>Game set up with board and deck</h1>
-        <Players />
-        <Board />
-        <Deck />
-      </div>
+      <Grid container>
+        <Typography variant="h1">Welcome to Casino Cards</Typography>
+        <Grid item md={12}>
+          <Link to="/board">
+            <Button variant="outlined" color="secondary">
+              {"Play"}
+            </Button>
+          </Link>
+        </Grid>
+        <Grid item md={12}>
+          <Button variant="outlined" color="secondary">
+            {"Options"}
+          </Button>
+        </Grid>
+        <Grid item md={12}>
+          <Button variant="outlined" color="secondary">
+            {"Quit"}
+          </Button>
+        </Grid>
+      </Grid>
     );
   }
 }

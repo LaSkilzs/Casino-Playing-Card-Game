@@ -8,6 +8,11 @@ module.exports = {
     filename: "bundle.js",
     path: path.resolve(__dirname, "build")
   },
+  resolve: {
+    alias: {
+      "@material-ui/styles": path.resolve("node_modules", "@material-ui/styles")
+    }
+  },
   module: {
     rules: [
       {
